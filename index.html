@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sovereign Links</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="text-slate-100 antialiased pb-16">
+  
+  <div id="toast" class="fixed top-5 left-1/2 -translate-x-1/2 bg-emerald-500 text-white px-6 py-3 rounded-full font-medium shadow-lg shadow-emerald-500/20 transform -translate-y-24 transition-transform duration-300 z-50 flex items-center gap-2">
+    <i class="ph ph-check-circle text-xl"></i>
+    <span data-i18n="app.copy_success">Copied!</span>
+  </div>
+
+  <div class="mx-auto max-w-2xl px-4 pt-16">
+    
+    <!-- Profile Header -->
+    <header class="text-center mb-12">
+      <div class="w-24 h-24 mx-auto rounded-full glass-panel flex items-center justify-center mb-4 border-indigo-500/30 shadow-lg shadow-indigo-500/20">
+        <i class="ph ph-user-circle text-5xl text-indigo-300"></i>
+      </div>
+      <h1 class="text-3xl font-bold text-white tracking-tight" data-i18n="app.title">Sovereign Links</h1>
+      <p class="text-indigo-300 font-medium mt-1" data-i18n="app.handle">@sovereign</p>
+    </header>
+
+    <!-- Payment Methods -->
+    <section class="mb-12">
+      <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-4 px-2 flex items-center gap-2">
+        <i class="ph ph-wallet"></i>
+        <span data-i18n="app.payments_title">Payment Methods</span>
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <!-- PayPal -->
+        <a href="https://paypal.me/toochikey" target="_blank" rel="noopener noreferrer" class="payment-btn flex flex-col items-center justify-center p-4 rounded-2xl glass-panel hover:bg-indigo-500/10 hover:border-indigo-400/30 group">
+          <i class="ph ph-paypal-logo text-3xl text-blue-400 mb-2 group-hover:scale-110 transition-transform"></i>
+          <span class="text-sm font-semibold" data-i18n="app.pay_paypal">PayPal</span>
+        </a>
+        <!-- Bitcoin -->
+        <button type="button" class="copy-btn payment-btn flex flex-col items-center justify-center p-4 rounded-2xl glass-panel hover:bg-orange-500/10 hover:border-orange-400/30 group" data-copy="bc1qw968re5gseqpkk5nx0ezqrp6dfhd20s8sll4k7">
+          <i class="ph ph-currency-btc text-3xl text-orange-400 mb-2 group-hover:scale-110 transition-transform"></i>
+          <span class="text-sm font-semibold text-center leading-tight">
+            <span data-i18n="app.pay_bitcoin">Bitcoin</span><br>
+            <span class="text-xs text-slate-400 font-normal opacity-80" data-i18n="app.pay_bitcoin_desc">(Copy BTC Address)</span>
+          </span>
+        </button>
+        <!-- Amazon -->
+        <button type="button" class="copy-btn payment-btn flex flex-col items-center justify-center p-4 rounded-2xl glass-panel hover:bg-yellow-500/10 hover:border-yellow-400/30 group" data-copy="digglestuart@gmail.com">
+          <i class="ph ph-amazon-logo text-3xl text-yellow-400 mb-2 group-hover:scale-110 transition-transform"></i>
+          <span class="text-sm font-semibold text-center leading-tight">
+            <span data-i18n="app.pay_amazon">Amazon US</span><br>
+            <span class="text-xs text-slate-400 font-normal opacity-80" data-i18n="app.pay_amazon_desc">(Copy Email)</span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Links Section -->
+    <section>
+      <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-4 px-2 flex items-center gap-2">
+        <i class="ph ph-link"></i>
+        <span data-i18n="app.links_title">My Links</span>
+      </h2>
+
+      <div class="space-y-8">
+        
+        <!-- Category: Store -->
+        <div>
+          <h3 class="text-sm font-medium text-indigo-300 mb-3 px-2 flex items-center gap-2"><i class="ph ph-shopping-bag"></i> <span data-i18n="app.cat_store">Store</span></h3>
+          <div class="space-y-3">
+            <a href="https://slammers-u-sstore.vercel.app/" target="_blank" class="link-btn flex items-center justify-between p-4 rounded-xl glass-panel group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-300">
+                  <i class="ph ph-storefront text-xl"></i>
+                </div>
+                <span class="font-medium text-slate-200" data-i18n="app.link_slam_store">Slam store</span>
+              </div>
+              <i class="ph ph-caret-right text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Category: Goth (Subs) -->
+        <div>
+          <h3 class="text-sm font-medium text-fuchsia-300 mb-3 px-2 flex items-center gap-2"><i class="ph ph-moon-stars"></i> <span data-i18n="app.cat_goth">Goth link</span></h3>
+          <div class="space-y-3">
+            <a href="https://sovereign-2-35u4.vercel.app/" target="_blank" class="link-btn flex items-center justify-between p-4 rounded-xl glass-panel group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-fuchsia-500/20 flex items-center justify-center text-fuchsia-300">
+                  <span class="text-xs font-bold" data-i18n="app.lang_en">EN</span>
+                </div>
+                <span class="font-medium text-slate-200" data-i18n="app.link_goth_en1">For English subs</span>
+              </div>
+              <i class="ph ph-caret-right text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://sovereign-women-public.vercel.app/" target="_blank" class="link-btn flex items-center justify-between p-4 rounded-xl glass-panel group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-fuchsia-500/20 flex items-center justify-center text-fuchsia-300">
+                  <span class="text-xs font-bold" data-i18n="app.lang_en">EN</span>
+                </div>
+                <span class="font-medium text-slate-200" data-i18n="app.link_goth_en2">For English subs (2)</span>
+              </div>
+              <i class="ph ph-caret-right text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://sovereign-silk-de.vercel.app/" target="_blank" class="link-btn flex items-center justify-between p-4 rounded-xl glass-panel group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-fuchsia-500/20 flex items-center justify-center text-fuchsia-300">
+                  <span class="text-xs font-bold" data-i18n="app.lang_de">DE</span>
+                </div>
+                <span class="font-medium text-slate-200" data-i18n="app.link_goth_de">German subs</span>
+              </div>
+              <i class="ph ph-caret-right text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://sovereign-silk-es.vercel.app/" target="_blank" class="link-btn flex items-center justify-between p-4 rounded-xl glass-panel group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-fuchsia-500/20 flex items-center justify-center text-fuchsia-300">
+                  <span class="text-xs font-bold" data-i18n="app.lang_es">ES</span>
+                </div>
+                <span class="font-medium text-slate-200" data-i18n="app.link_goth_es">Spain subs</span>
+              </div>
+              <i class="ph ph-caret-right text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://sovereign-silk-it.vercel.app/" target="_blank" class="link-btn flex items-center justify-between p-4 rounded-xl glass-panel group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-fuchsia-500/20 flex items-center justify-center text-fuchsia-300">
+                  <span class="text-xs font-bold" data-i18n="app.lang_it">IT</span>
+                </div>
+                <span class="font-medium text-slate-200" data-i18n="app.link_goth_it">Italy</span>
+              </div>
+              <i class="ph ph-caret-right text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Category: Craig / Dom -->
+        <div>
+          <h3 class="text-sm font-medium text-cyan-300 mb-3 px-2 flex items-center gap-2"><i class="ph ph-crown"></i> <span data-i18n="app.cat_dom">Craig / Dom</span></h3>
+          <div class="space-y-3">
+            <a href="https://3skak.vercel.app/" target="_blank" class="link-btn flex items-center justify-between p-4 rounded-xl glass-panel group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-300">
+                  <span class="text-xs font-bold" data-i18n="app.lang_en">EN</span>
+                </div>
+                <span class="font-medium text-slate-200" data-i18n="app.link_dom_en1">Another interface for slam sluts</span>
+              </div>
+              <i class="ph ph-caret-right text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://sinter-lac.vercel.app/" target="_blank" class="link-btn flex items-center justify-between p-4 rounded-xl glass-panel group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-300">
+                  <span class="text-xs font-bold" data-i18n="app.lang_en">EN</span>
+                </div>
+                <span class="font-medium text-slate-200" data-i18n="app.link_dom_en2">English (2)</span>
+              </div>
+              <i class="ph ph-caret-right text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://sovereign-men-public.vercel.app/" target="_blank" class="link-btn flex items-center justify-between p-4 rounded-xl glass-panel group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-300">
+                  <span class="text-xs font-bold" data-i18n="app.lang_en">EN</span>
+                </div>
+                <span class="font-medium text-slate-200" data-i18n="app.link_dom_en3">English (3)</span>
+              </div>
+              <i class="ph ph-caret-right text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://sovereign-i-t-bo4l.vercel.app/" target="_blank" class="link-btn flex items-center justify-between p-4 rounded-xl glass-panel group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-300">
+                  <span class="text-xs font-bold" data-i18n="app.lang_it">IT</span>
+                </div>
+                <span class="font-medium text-slate-200" data-i18n="app.link_dom_it">Italian fags</span>
+              </div>
+              <i class="ph ph-caret-right text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://sovereign-es-ezgt.vercel.app/" target="_blank" class="link-btn flex items-center justify-between p-4 rounded-xl glass-panel group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-300">
+                  <span class="text-xs font-bold" data-i18n="app.lang_es">ES</span>
+                </div>
+                <span class="font-medium text-slate-200" data-i18n="app.link_dom_es">Spain fags</span>
+              </div>
+              <i class="ph ph-caret-right text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://sovereign-fr.vercel.app/" target="_blank" class="link-btn flex items-center justify-between p-4 rounded-xl glass-panel group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-300">
+                  <span class="text-xs font-bold" data-i18n="app.lang_fr">FR</span>
+                </div>
+                <span class="font-medium text-slate-200" data-i18n="app.link_dom_fr">French fags</span>
+              </div>
+              <i class="ph ph-caret-right text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+            <a href="https://sovereign-deutsh.vercel.app/" target="_blank" class="link-btn flex items-center justify-between p-4 rounded-xl glass-panel group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-300">
+                  <span class="text-xs font-bold" data-i18n="app.lang_de">DE</span>
+                </div>
+                <span class="font-medium text-slate-200" data-i18n="app.link_dom_de">German fags</span>
+              </div>
+              <i class="ph ph-caret-right text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
